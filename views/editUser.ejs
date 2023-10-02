@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Edit User</title>
+</head>
+<style>
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+    }
+    input,textarea
+    {
+        margin: 10px;
+        width: 100%;
+    }
+    button{
+        width: 250px;
+
+    }
+</style>
+<body>
+    <h2>Edit user</h2> 
+    <form action="/user/<%=data.id%>?_method=PATCH" method="POST">
+        <textarea name="username" id="" cols="30" rows="1"><%=data.username%></textarea>
+        <textarea name="email" id="" cols="30" rows="1"><%=data.email%></textarea>
+        <input type="password" name="password" placeholder="enter password">
+        <button type="submit">SUBMIT</button>
+    </form>
+</body>
+</html>
